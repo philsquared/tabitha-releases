@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabitha</title>
+<meta name="description" content="Every Safari and Chrome tab, across all windows and spaces, one keystroke away.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root {
+    --top: #ffffff;
+    --mid: #fffdfc;
+    --bg: #fffaf7;
+    --text: #2a1f22;
+    --muted: #75666a;
+    --card: #ffffff;
+    --border: #f0e2dc;
+    --accent: #e2405f;
+    --accent-2: #ff9a6a;
+    --key: #f6ece8;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --top: #2c2226;
+        --mid: #201a1c;
+        --bg: #1b1517;
+        --text: #f4ecee;
+        --muted: #b3a3a7;
+        --card: #251d20;
+        --border: #3a2e32;
+        --key: #34282c;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+header { text-align: center; padding: 72px 20px 48px; background: linear-gradient(var(--top) 55%, var(--mid)); }
+main { padding: 0 20px; background: linear-gradient(var(--mid), var(--bg) 1400px); }
+main > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+header img { width: 160px; height: 160px; }
+h1 { font-size: 48px; letter-spacing: -0.02em; margin: 8px 0 4px; }
+.tagline { font-size: 22px; color: var(--muted); margin: 0 auto 32px; max-width: 720px; text-wrap: balance; }
+.download {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgb(226 64 95 / 0.3);
+}
+.download:hover { filter: brightness(1.05); }
+.requirements { color: var(--muted); font-size: 14px; margin-top: 14px; }
+.requirements a { color: inherit; }
+section { padding: 32px 0; border-top: 1px solid var(--border); }
+h2 { font-size: 24px; margin: 0 0 16px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.cards.pairs { grid-template-columns: repeat(2, 1fr); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+table { border-collapse: collapse; width: 100%; }
+td { padding: 8px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+td:first-child { width: 140px; white-space: nowrap; }
+kbd {
+    font: 14px -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--key);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 7px;
+}
+ol { padding-left: 22px; }
+li { margin-bottom: 6px; }
+footer { color: var(--muted); font-size: 14px; text-align: center; padding: 32px 0 48px; border-top: 1px solid var(--border); }
+footer a { color: inherit; }
+@media (max-width: 520px) {
+    header { padding-top: 48px; }
+    header img { width: 120px; height: 120px; }
+    h1 { font-size: 38px; }
+    .tagline { font-size: 19px; }
+    td:first-child { width: 110px; }
+    .cards.pairs { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="icon.png" alt="">
+    <h1>Tabitha</h1>
+    <p class="tagline">Every Safari and Chrome tab, across all windows and spaces, one keystroke away.</p>
+    <a class="download" href="https://github.com/philsquared/tabitha-releases/releases/latest/download/Tabitha.dmg">Download for Mac</a>
+    <p class="requirements">Free · macOS 14 or later · Apple silicon ·
+        <a href="https://github.com/philsquared/tabitha-releases/releases">Release notes</a></p>
+</header>
+<main>
+
+    <section>
+        <h2>Find any tab</h2>
+        <div class="cards pairs">
+            <div class="card">
+                <h3>From anywhere</h3>
+                <p>Press <kbd>⌃⌥T</kbd> in any app and every open tab (Safari or Chrome) is in front of you.</p>
+            </div>
+            <div class="card">
+                <h3>Every window, every space</h3>
+                <p>Tabs from all your Safari and Chrome windows, in one place. Choosing one takes you to its space.</p>
+            </div>
+            <div class="card">
+                <h3>Type to search</h3>
+                <p>Start typing to narrow the list by title or address, then press return.</p>
+            </div>
+            <div class="card">
+                <h3>See your tabs</h3>
+                <p>Browse as a list, with a large preview, or as a grid of thumbnails.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Keys</h2>
+        <table>
+            <tr><td><kbd>⌃⌥T</kbd></td><td>Show or hide Tabitha</td></tr>
+            <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Move the selection</td></tr>
+            <tr><td><kbd>↩</kbd></td><td>Switch to the tab</td></tr>
+            <tr><td><kbd>⇥</kbd></td><td>Change view: list, preview or grid</td></tr>
+            <tr><td><kbd>⌘G</kbd></td><td>Change grouping</td></tr>
+            <tr><td><kbd>⌘,</kbd></td><td>Settings</td></tr>
+            <tr><td><kbd>esc</kbd></td><td>Close</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Private by design</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Stays on your Mac</h3>
+                <p>Tabitha never connects to the internet. Your tabs aren't sent anywhere.</p>
+            </div>
+            <div class="card">
+                <h3>Previews in memory only</h3>
+                <p>Tab pictures are never saved to disk, and they're gone when you quit.</p>
+            </div>
+            <div class="card">
+                <h3>Extras are opt-in</h3>
+                <p>Previews and faster switching need extra permissions, so they stay off until you turn them on in Settings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Install</h2>
+        <ol>
+            <li>Open <strong>Tabitha.dmg</strong> and drag Tabitha to Applications.</li>
+            <li>Open Tabitha. It lives in the menu bar, not the Dock.</li>
+            <li>Press <kbd>⌃⌥T</kbd>. macOS asks once whether Tabitha may read your Safari and Chrome tabs.</li>
+            <li>For tab previews, open <strong>Settings</strong> and turn on the optional features you want.</li>
+        </ol>
+    </section>
+
+    <footer>
+        © 2026 Phil Nash
+    </footer>
+</main>
+</body>
+</html>
